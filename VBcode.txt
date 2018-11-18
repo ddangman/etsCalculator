@@ -1,0 +1,326 @@
+Private Sub age_Click()
+    Dim y As Integer
+    y = InputBox("ETS year")
+    Dim m As Integer
+    m = InputBox("ETS month")
+    Dim d As Integer
+    d = InputBox("ETS day")
+    
+    Dim yy As Integer
+    yy = InputBox("DOB year")
+    Dim mm As Integer
+    mm = InputBox("DOB month")
+    Dim dd As Integer
+    dd = InputBox("DOB day")
+    
+    Dim ry As Integer
+    ry = y - yy
+    Dim rm As Integer
+    rm = m - mm
+    Dim rd As Integer
+    rd = d - dd + 1
+    
+    If rd <= 0 Then
+        rd = rd + 30
+        rm = rm - 1
+    End If
+    
+    If rd >= 30 Then
+        rd = rd - 30
+        rm = rm + 1
+    End If
+    
+    If rm <= 0 Then
+        rm = rm + 12
+        ry = ry - 1
+    End If
+    
+    If rm >= 12 Then
+        rm = rm - 12
+        ry = ry + 1
+    End If
+    
+    ActiveDocument.Tables(1).Rows(1).Cells(2).Range.Text = ry
+    ActiveDocument.Tables(1).Rows(2).Cells(2).Range.Text = rm
+    ActiveDocument.Tables(1).Rows(3).Cells(2).Range.Text = rd
+End Sub
+
+Private Sub apft_Click()
+    Dim y As Integer
+    y = InputBox("DA 4836 (extension) year")
+    Dim m As Integer
+    m = InputBox("DA 4836 (extension) month")
+    Dim d As Integer
+    d = InputBox("DA 4836 (extension) day")
+    
+    Dim yy As Integer
+    yy = InputBox("APFT year")
+    Dim mm As Integer
+    mm = InputBox("APFT month")
+    Dim dd As Integer
+    dd = InputBox("APFT day")
+    
+    Dim ry As Integer
+    ry = y - yy
+    Dim rm As Integer
+    rm = m - mm
+    Dim rd As Integer
+    rd = d - dd + 1
+    
+    If rd <= 0 Then
+        rd = rd + 30
+        rm = rm - 1
+    End If
+    
+    If rd >= 30 Then
+        rd = rd - 30
+        rm = rm + 1
+    End If
+    
+    If rm <= 0 Then
+        rm = rm + 12
+        ry = ry - 1
+    End If
+    
+    If rm >= 12 Then
+        rm = rm - 12
+        ry = ry + 1
+    End If
+    
+    Dim val As String
+    Dim val2 As String
+    Dim months As Double
+    months = rm + (ry * 12) + (rd / 30)
+    If months > 8 Then
+        val = ry & " INvalid AGR"
+    Else
+        val = ry & " valid AGR"
+    End If
+    
+    If months > 14 Then
+        val2 = rm & " INvalid M-day"
+    Else
+        val2 = rm & " valid M-day"
+    End If
+        
+    ActiveDocument.Tables(1).Rows(1).Cells(2).Range.Text = val
+    ActiveDocument.Tables(1).Rows(2).Cells(2).Range.Text = val2
+    ActiveDocument.Tables(1).Rows(3).Cells(2).Range.Text = rd
+End Sub
+
+Private Sub credible_Click()
+    Dim y As Integer
+    y = InputBox("ETS year")
+    Dim m As Integer
+    m = InputBox("ETS month")
+    Dim d As Integer
+    d = InputBox("ETS day")
+    
+    Dim yy As Integer
+    yy = InputBox("PEBD year")
+    Dim mm As Integer
+    mm = InputBox("PEBD month")
+    Dim dd As Integer
+    dd = InputBox("PEBD day")
+    
+    Dim ry As Integer
+    ry = y - yy
+    Dim rm As Integer
+    rm = m - mm
+    Dim rd As Integer
+    rd = d - dd + 1
+    
+    If rd <= 0 Then
+        rd = rd + 30
+        rm = rm - 1
+    End If
+    
+    If rd >= 30 Then
+        rd = rd - 30
+        rm = rm + 1
+    End If
+    
+    If rm <= 0 Then
+        rm = rm + 12
+        ry = ry - 1
+    End If
+    
+    If rm >= 12 Then
+        rm = rm - 12
+        ry = ry + 1
+    End If
+    
+    ActiveDocument.Tables(1).Rows(1).Cells(2).Range.Text = ry
+    ActiveDocument.Tables(1).Rows(2).Cells(2).Range.Text = rm
+    ActiveDocument.Tables(1).Rows(3).Cells(2).Range.Text = rd
+End Sub
+
+Private Sub extension_Click()
+    Dim y As Integer
+    y = InputBox("ETS year")
+    Dim m As Integer
+    m = InputBox("ETS month")
+    Dim d As Integer
+    d = InputBox("ETS day")
+    
+        Dim ry As Integer
+    ry = y
+    Dim rm As Integer
+    rm = m - 12
+    Dim rd As Integer
+    rd = d
+    
+    If rm <= 0 Then
+        rm = rm + 12
+        ry = ry - 1
+    End If
+    
+    If rm >= 12 Then
+        rm = rm - 12
+        ry = ry + 1
+    End If
+    
+    ActiveDocument.Tables(1).Rows(1).Cells(2).Range.Text = ry
+    ActiveDocument.Tables(1).Rows(2).Cells(2).Range.Text = rm
+    ActiveDocument.Tables(1).Rows(3).Cells(2).Range.Text = rd
+End Sub
+
+Private Sub maxex_Click()
+    Dim y As Integer
+    y = InputBox("ETS year")
+    Dim m As Integer
+    m = InputBox("ETS month")
+    Dim d As Integer
+    d = InputBox("ETS day")
+    
+    Dim yy As Integer
+    yy = InputBox("DOB year")
+    Dim mm As Integer
+    mm = InputBox("DOB month")
+    Dim dd As Integer
+    dd = InputBox("DOB day")
+    
+    Dim ry As Integer
+    ry = y - yy
+    Dim rm As Integer
+    rm = m - mm
+    Dim rd As Integer
+    rd = d - dd + 1
+    
+    If rd <= 0 Then
+        rd = rd + 30
+        rm = rm - 1
+    End If
+    
+    If rd >= 30 Then
+        rd = rd - 30
+        rm = rm + 1
+    End If
+    
+    If rm <= 0 Then
+        rm = rm + 12
+        ry = ry - 1
+    End If
+    
+    If rm >= 12 Then
+        rm = rm - 12
+        ry = ry + 1
+    End If
+    
+    ActiveDocument.Tables(1).Rows(1).Cells(2).Range.Text = ry
+    ActiveDocument.Tables(1).Rows(2).Cells(2).Range.Text = rm
+    ActiveDocument.Tables(1).Rows(3).Cells(2).Range.Text = rd
+    
+    Dim sixty As String
+    Dim sixtyyear As Integer
+    sixtyyear = yy + 60
+    ActiveDocument.Content.InsertAfter Text:=vbCrLf & "date of 60th birthday " & sixtyyear & " " & mm & " " & dd
+    
+    Dim ey As Integer
+    ey = sixtyyear - y
+    Dim em As Integer
+    em = mm - m
+    Dim ed As Integer
+    ed = 30 - d
+    
+    If ed <= 0 Then
+        ed = ed + 30
+        em = em - 1
+    End If
+    
+    If ed >= 30 Then
+        ed = ed - 30
+        em = em + 1
+    End If
+    
+    If em <= 0 Then
+        em = em + 12
+        ey = ey - 1
+    End If
+    
+    If em >= 12 Then
+        em = em - 12
+        ey = ey + 1
+    End If
+    
+    ActiveDocument.Content.InsertAfter Text:=vbCrLf & "maximum time of extension " & ey & " " & em & " " & ed
+    
+    If ey > 0 Then
+        ActiveDocument.Content.InsertAfter Text:=vbCrLf & "Soldier does NOT meet 59+ extension rule "
+    End If
+
+End Sub
+
+Private Sub physical_Click()
+    Dim y As Integer
+    y = InputBox("ETS year")
+    Dim m As Integer
+    m = InputBox("ETS month")
+    Dim d As Integer
+    d = InputBox("ETS day")
+    
+    Dim yy As Integer
+    yy = InputBox("year of last physical")
+    Dim mm As Integer
+    mm = InputBox("month of last physical")
+    Dim dd As Integer
+    dd = InputBox("day of last physical")
+    
+    Dim ry As Integer
+    ry = y - yy
+    Dim rm As Integer
+    rm = m - mm
+    Dim rd As Integer
+    rd = d - dd + 1
+    
+    If rd <= 0 Then
+        rd = rd + 30
+        rm = rm - 1
+    End If
+    
+    If rd >= 30 Then
+        rd = rd - 30
+        rm = rm + 1
+    End If
+    
+    If rm <= 0 Then
+        rm = rm + 12
+        ry = ry - 1
+    End If
+    
+    If rm >= 12 Then
+        rm = rm - 12
+        ry = ry + 1
+    End If
+    
+    Dim val As String
+    If ry > 0 Then
+        val = ry & " INvalid"
+    Else
+        val = ry & " valid"
+    End If
+        
+    ActiveDocument.Tables(1).Rows(1).Cells(2).Range.Text = val
+    ActiveDocument.Tables(1).Rows(2).Cells(2).Range.Text = rm
+    ActiveDocument.Tables(1).Rows(3).Cells(2).Range.Text = rd
+End Sub
